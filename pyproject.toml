@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "terraform_cdk"
+version = "0.0.1"
+description = "Infra deployment aka terraform_cdk"
+authors = ["Krijn van der Burg <https://www.linkedin.com/in/krijnvanderburg/>"]
+readme = "README.md"
+packages = [{include = "terraform_cdk", from="src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+cdktf = "^0.20.10"
+cdktf-cdktf-provider-azurerm = "^13.14.0"
+cdktf-cdktf-provider-databricks = "^13.27.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.2"
+pytest-cov = "^6.0.0"
+pytest-xdist = "3.6.1" 
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
